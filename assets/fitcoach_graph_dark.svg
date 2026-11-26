@@ -9,8 +9,8 @@
       .t { font-size: 14px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
       .s { font-size: 12px; text-anchor: middle; dominant-baseline: central; }
       .c { font-size: 11px; text-anchor: middle; dominant-baseline: central; font-family: Menlo, Consolas, monospace; }
-      .model rect { fill: #712B13; stroke: #F0997B; stroke-width: 1; }
-      .model .t { fill: #FAECE7; } .model .s, .model .c { fill: #F5C4B3; }
+      .model rect { fill: #633806; stroke: #EF9F27; stroke-width: 1; }
+      .model .t { fill: #FAEEDA; } .model .s, .model .c { fill: #FAC775; }
       .code rect { fill: #085041; stroke: #5DCAA5; stroke-width: 1; }
       .code .t { fill: #E1F5EE; } .code .s, .code .c { fill: #9FE1CB; }
       .edge rect { fill: #2C2C2A; stroke: #888780; stroke-width: 1; }
