@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1460" viewBox="0 0 680 730" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>Граф FitCoach: шлях одного повідомлення</title>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#B4B2A9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      .arr { stroke: #B4B2A9; stroke-width: 1; fill: none; }
+      .t { font-size: 14px; font-weight: 600; text-anchor: middle; dominant-baseline: central; }
+      .s { font-size: 12px; text-anchor: middle; dominant-baseline: central; }
+      .c { font-size: 11px; text-anchor: middle; dominant-baseline: central; font-family: Menlo, Consolas, monospace; }
+      .model rect { fill: #712B13; stroke: #F0997B; stroke-width: 1; }
+      .model .t { fill: #FAECE7; } .model .s, .model .c { fill: #F5C4B3; }
+      .code rect { fill: #085041; stroke: #5DCAA5; stroke-width: 1; }
+      .code .t { fill: #E1F5EE; } .code .s, .code .c { fill: #9FE1CB; }
+      .edge rect { fill: #2C2C2A; stroke: #888780; stroke-width: 1; }
+      .edge .t { fill: #F1EFE8; }
+      .legend { font-size: 12px; fill: #D3D1C7; dominant-baseline: central; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="680" height="730" fill="#141413"/>
+
+  <g class="edge"><rect x="230" y="20" width="220" height="44" rx="22"/><text class="t" x="340" y="42">Повідомлення людини</text></g>
+  <line x1="340" y1="64" x2="340" y2="92" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="model"><rect x="170" y="94" width="340" height="70" rx="8"/>
+    <text class="t" x="340" y="114">Перевірка тривожних ознак</text>
+    <text class="s" x="340" y="134">шукає ознаки, сказані своїми словами</text>
+    <text class="c" x="340" y="152">safety</text></g>
+  <line x1="340" y1="164" x2="340" y2="192" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="code"><rect x="170" y="194" width="340" height="70" rx="8"/>
+    <text class="t" x="340" y="214">Розбір повідомлення</text>
+    <text class="s" x="340" y="234">оновлює профіль, рахує ІМТ, обирає шлях</text>
+    <text class="c" x="340" y="252">profile</text></g>
+
+  <path d="M340 264 L340 279 L107 279 L107 292" class="arr" marker-end="url(#arrow)"/>
+  <path d="M262 279 L262 292" class="arr" marker-end="url(#arrow)"/>
+  <path d="M340 279 L417 279 L417 292" class="arr" marker-end="url(#arrow)"/>
+  <path d="M417 279 L572 279 L572 292" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="code"><rect x="40" y="294" width="135" height="70" rx="8"/>
+    <text class="t" x="107" y="314">До лікаря</text>
+    <text class="s" x="107" y="334">тривожна ознака</text>
+    <text class="c" x="107" y="352">doctor</text></g>
+  <g class="code"><rect x="195" y="294" width="135" height="70" rx="8"/>
+    <text class="t" x="262" y="314">Готова відповідь</text>
+    <text class="s" x="262" y="334">низька вага тощо</text>
+    <text class="c" x="262" y="352">profile → END</text></g>
+  <g class="code"><rect x="350" y="294" width="135" height="70" rx="8"/>
+    <text class="t" x="417" y="314">Повтор запиту</text>
+    <text class="s" x="417" y="334">після уточнення</text>
+    <text class="c" x="417" y="352">resume</text></g>
+  <g class="model"><rect x="505" y="294" width="135" height="70" rx="8"/>
+    <text class="t" x="572" y="314">Розуміння запиту</text>
+    <text class="s" x="572" y="334">вільний текст</text>
+    <text class="c" x="572" y="352">agent</text></g>
+
+  <line x1="417" y1="364" x2="417" y2="402" class="arr" marker-end="url(#arrow)"/>
+  <path d="M545 364 L545 439 L505 439" class="arr" marker-end="url(#arrow)"/>
+  <text class="legend" x="538" y="392" text-anchor="end" font-size="11">обрала інструмент</text>
+  <text class="legend" x="608" y="470" text-anchor="end" font-size="11">відповіла сама</text>
+
+  <g class="code"><rect x="268" y="404" width="234" height="70" rx="8"/>
+    <text class="t" x="385" y="424">Інструменти</text>
+    <text class="s" x="385" y="444">ІМТ, калорії, вправи, план</text>
+    <text class="s" x="385" y="462">↻ лише розрахунки: знову до моделі</text></g>
+
+  <path d="M290 474 L290 494 L262 494 L262 512" class="arr" marker-end="url(#arrow)"/>
+  <line x1="417" y1="474" x2="417" y2="512" class="arr" marker-end="url(#arrow)"/>
+  <path d="M615 364 L615 512" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="code"><rect x="195" y="514" width="135" height="70" rx="8"/>
+    <text class="t" x="262" y="534">Питання про дані</text>
+    <text class="s" x="262" y="554">бракує даних</text>
+    <text class="c" x="262" y="572">question</text></g>
+  <g class="code"><rect x="350" y="514" width="135" height="70" rx="8"/>
+    <text class="t" x="417" y="534">Показати вправи</text>
+    <text class="s" x="417" y="554">текст коду як є</text>
+    <text class="c" x="417" y="572">present</text></g>
+  <g class="code"><rect x="505" y="514" width="135" height="70" rx="8"/>
+    <text class="t" x="572" y="534">Перевірка моделі</text>
+    <text class="s" x="572" y="554">вправи лише з бази</text>
+    <text class="c" x="572" y="572">check</text></g>
+
+  <line x1="107" y1="364" x2="107" y2="622" class="arr" marker-end="url(#arrow)"/>
+  <path d="M210 364 L210 384 L185 384 L185 622" class="arr" marker-end="url(#arrow)"/>
+  <line x1="262" y1="584" x2="262" y2="622" class="arr" marker-end="url(#arrow)"/>
+  <line x1="417" y1="584" x2="417" y2="622" class="arr" marker-end="url(#arrow)"/>
+  <line x1="572" y1="584" x2="572" y2="622" class="arr" marker-end="url(#arrow)"/>
+
+  <g class="edge"><rect x="40" y="624" width="600" height="44" rx="22"/><text class="t" x="340" y="646">Відповідь людині</text></g>
+
+  <g class="model"><rect x="210" y="690" width="16" height="16" rx="3"/></g>
+  <text class="legend" x="234" y="698">модель</text>
+  <g class="code"><rect x="320" y="690" width="16" height="16" rx="3"/></g>
+  <text class="legend" x="344" y="698">код (без моделі)</text>
+</svg>
